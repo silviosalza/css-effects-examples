@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 3vw;
+
+    /* il titolo aumenta e diminuisce a seconda dello schermo, ma rimane immutato se aumentiamo grandezza font tramite comandi tastiera */
+
+    
+}
+
+.titolo2{
+    font-size: calc(1rem + 2vw);
+    /* trucchetto per unire i due modi di font syze, il testo è responsive tramite vw ed è ingrandibile tramite comandi tastiera */
+    
+}
+
+.titolo3{
+    clamp(min size, calc(1rem+2vw), max size)
+}
+
