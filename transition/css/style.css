@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    transition: all 1.3s linear;
+    opacity: 1;
+    /* gestisce come avviene cambiamento di una proprietà 
+    ex. cambia colore e larghezza in 1.3 secondi
+    si mette sempre nella classe base e non hover perchè funziona anche in reverse*/
+    /* "linear" gestisce la velocità rendendola lineare durante tutto il cambiamento */
+    
+}
+.box:hover{
+    background-color: blue;
+    width: 300px;
+    
+}
+
+.box:active{  
+    opacity: 0;
+}
+/* 
+----------------------------------------
+ANIMATION */
+
+.box2{
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    animation-name: color-change, move;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    animation-direction: reverse;
+}
+
+
+@keyframes color-change{
+    0%{background-color: red;}
+
+    25%{background-color: blue;}
+
+    50%{background-color: yellow;}
+
+    75%{background-color: greenyellow;}
+
+    100%{background-color: orange;}
+}
+
+@keyframes move{
+    0%{left: 0;}
+    100%{left: calc(100% - 250px) }
+}
+
+
